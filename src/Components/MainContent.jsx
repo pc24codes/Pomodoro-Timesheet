@@ -2,9 +2,16 @@ import React from 'react';
 import Navbar from "./Navbar"
 import "../App.css"
 
+//React-Bootstrap imports
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
+
+
+//Icons
+import { CgCoffee } from "react-icons/cg";
+import { MdLogin } from "react-icons/md";
+import { IoMdPower } from "react-icons/io";
 
 
 export default function MainContent() {
@@ -17,22 +24,21 @@ export default function MainContent() {
     
     return(
         <>
-        <Navbar/>
+        {/* This renders the navbar from components folder */}
+        <Navbar/> 
         <Card>
       <Card.Header>
         <Nav variant="tabs" defaultActiveKey="#first">
-          <Nav.Item>
-            <Nav.Link href="#first">Today</Nav.Link>
-          </Nav.Item>
         </Nav>
       </Card.Header>
       <Card.Body>
-        <Card.Title>{dateToday}</Card.Title>
-        <Button variant="success">Clock in</Button>
-        <span>  </span>
-        <Button variant="outline-dark">Start break</Button>
-        <span>  </span>
-        <Button variant="danger">Clock out</Button>
+        {/* Below line will get dynamic date  */}
+        <Card.Title>{dateToday}</Card.Title>  
+        <Button href="#" variant="success" className='me-2'><MdLogin className='me-2'/>Clock in</Button>
+
+        <Button className ="hover-overlay" variant="outline-light" style={{borderColor:'#7D2DEC', borderWidth:'2px', color:'#7D2DEC'}}><CgCoffee className='me-1'/>Start break</Button>
+        
+        <Button variant="danger"className='ms-2'><IoMdPower className='me-1'/>Clock out</Button>
       </Card.Body>
     </Card>
         

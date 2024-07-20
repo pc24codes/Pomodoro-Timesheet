@@ -1,13 +1,3 @@
-/* h3 {
-  color: azure;
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-} */
-
-/* body {
-  background-color: #f8f9f5;
-} */
 * {
   font-family: "Inter", sans-serif;
 }
@@ -88,23 +78,6 @@
   background-color: #474a53;
 }
 
-/* #username-ele,
-#password-ele,
-#sign-in,
-#forgot-ele, */
-
-/* 
-button {
-  font-family: Sora;
-  border: none;
-  border-bottom: 2px #27292e solid;
-  border-radius: 3px;
-  margin-top: 5px;
-  margin-left: 5px;
-  outline: none;
-  background-color: bisque;
-} */
-
 #username-ele:focus {
   border-bottom: 3px solid #d32323;
 }
@@ -125,45 +98,22 @@ a {
 /*Sign in box END*/
 
 /* Main Content start */
-
-.main-navbar {
-  background-color: #f1faee;
-  width: 200px;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding-top: 80px;
+.hover-overlay {
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-list {
-  color: #e63946;
-  position: fixed;
-  float: left;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+.hover-overlay:hover {
+  background-color: #7d2dec;
+  color: white;
 }
 
-.nav-item {
-  color: #e63946;
-  text-decoration: none;
-  padding: 10px 20px;
+.hover-overlay:hover .btn-outline-light {
+  color: white; /* Ensures text color stays white */
 }
-
-.app-name {
-  position: fixed;
-  top: 0;
-  color: #27292e;
-}
-
-.welcome-text {
-  float: right;
-  color: #1d3557;
-  padding-right: 20px;
-}
-
 /* Main Content END */
+
+#datepicker--comp card {
+  display: flex;
+  justify-content: space-around; /* Adjusts spacing between items */
+  align-items: center; /* Centers items vertically */
+}

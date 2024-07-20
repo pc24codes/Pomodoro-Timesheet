@@ -1,40 +1,49 @@
 import React from 'react';
+import Greeting from './Greeting';
+
+//Bootstrap-react imports
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Badge from 'react-bootstrap/Badge'
+
+//icons
+import {FaHome,FaRupeeSign,FaSignOutAlt } from "react-icons/fa";
+import { MdSpaceDashboard } from "react-icons/md";
 
 export default function NavBar() {
-
-
-
-
     let user = "Parasuram";
+
+    
     return(
         <>
       {[false].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">Hello {user}!</Navbar.Brand>
+            <div className="d-flex align-items-center">
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Brand className='ms-3' >{`Hello ${user}! `}</Navbar.Brand>
+          </div>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="end"
+              placement="start"
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Pomodoro Timesheet
+                  Pomodoro Timesheet<Badge bg="secondary" className='ms-2'>Pro</Badge>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Dashboard</Nav.Link>
-                  <Nav.Link href="#action2">Signout</Nav.Link>
+                  <Nav.Link href="#action1"><FaHome className='me-2'/>Home</Nav.Link>
+                  <Nav.Link href="#action2"><MdSpaceDashboard className='me-2'/>Dashboard</Nav.Link>
+                  <Nav.Link href="#action2"><FaRupeeSign className='me-2'/>Pricing</Nav.Link>
+                  <Nav.Link href="#action2"><FaSignOutAlt className='me-2'/>Signout</Nav.Link>
+
                     <NavDropdown.Divider />
                 </Nav>
               </Offcanvas.Body>
@@ -47,18 +56,3 @@ export default function NavBar() {
     )
 }
 
-
-
-/* 
-  <>
-        <h4 className='app-name'>My Timesheet</h4>
-       <div className='main-navbar'>
-        <ul className='nav-list'>
-            <li className='nav-item'><a href="#">Home</a></li>
-            <li className='nav-item'><a href="#">Dashboard</a></li>
-            <li className='nav-item'><a href="#">Sign Out</a></li>
-        </ul>
-        </div>
-        </>
-       
-         */
