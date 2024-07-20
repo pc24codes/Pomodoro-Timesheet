@@ -1,3 +1,16 @@
+/* h3 {
+  color: azure;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+} */
+
+/* body {
+  background-color: #f8f9f5;
+} */
+* {
+  font-family: "Inter", sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -5,12 +18,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -28,11 +35,135 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Sign-in Box  */
+
+#Hello {
+  color: #af1d1d;
 }
+
+.NewDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  width: 100%;
+  color: aliceblue;
+  background-color: #2a2e36;
+}
+
+#profile-icon {
+  margin-top: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: 4px white solid;
+  background-size: contain;
+  background-image: url("../public/profile-icon.png");
+}
+
+.sign-in-box {
+  color: aliceblue;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+  width: 450px;
+  background-color: #27292e;
+  font-weight: 600;
+}
+
+#sign-in-form {
+  color: aliceblue;
+  /* display: flex;
+  flex-direction: column; */
+
+  height: 80%;
+  width: 80%;
+  background-color: #474a53;
+}
+
+/* #username-ele,
+#password-ele,
+#sign-in,
+#forgot-ele, */
+
+/* 
+button {
+  font-family: Sora;
+  border: none;
+  border-bottom: 2px #27292e solid;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-left: 5px;
+  outline: none;
+  background-color: bisque;
+} */
+
+#username-ele:focus {
+  border-bottom: 3px solid #d32323;
+}
+
+#password-ele:focus {
+  border-bottom: 3px solid #d32323;
+}
+
+#forgot-ele {
+  font-size: small;
+  margin: 10px;
+}
+/* 
+a {
+  text-decoration: none;
+} */
+
+/*Sign in box END*/
+
+/* Main Content start */
+
+.main-navbar {
+  background-color: #f1faee;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 80px;
+}
+
+.nav-list {
+  color: #e63946;
+  position: fixed;
+  float: left;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  color: #e63946;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.app-name {
+  position: fixed;
+  top: 0;
+  color: #27292e;
+}
+
+.welcome-text {
+  float: right;
+  color: #1d3557;
+  padding-right: 20px;
+}
+
+/* Main Content END */
