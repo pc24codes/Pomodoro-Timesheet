@@ -1,96 +1,8 @@
 * {
   font-family: "Inter", sans-serif;
 }
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-/* Sign-in Box  */
-
-#Hello {
-  color: #af1d1d;
-}
-
-.NewDiv {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  height: 50px;
-  width: 100%;
-  color: aliceblue;
-  background-color: #2a2e36;
-}
-
-#profile-icon {
-  margin-top: 5px;
-  height: 30px;
-  width: 30px;
-  border-radius: 100%;
-  border: 4px white solid;
-  background-size: contain;
-  background-image: url("../public/profile-icon.png");
-}
-
-.sign-in-box {
-  color: aliceblue;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 450px;
-  width: 450px;
-  background-color: #27292e;
-  font-weight: 600;
-}
-
-#sign-in-form {
-  color: aliceblue;
-  /* display: flex;
-  flex-direction: column; */
-
-  height: 80%;
-  width: 80%;
-  background-color: #474a53;
-}
-
-#username-ele:focus {
-  border-bottom: 3px solid #d32323;
-}
-
-#password-ele:focus {
-  border-bottom: 3px solid #d32323;
-}
-
-#forgot-ele {
-  font-size: small;
-  margin: 10px;
-}
-/* 
+/* ?/* 
 a {
   text-decoration: none;
 } */
@@ -116,4 +28,85 @@ a {
   display: flex;
   justify-content: space-around; /* Adjusts spacing between items */
   align-items: center; /* Centers items vertically */
+}
+
+/* MUI Styling*/ /* src/components/SignIn.css */
+/* src/components/SignIn.css */
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.sign-in-background {
+  background-color: #0373b8; /* Change this to your desired background color */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vh-100 {
+  min-height: 100vh;
+}
+
+.sign-in-card {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 75%; /* Adjusted width */
+  max-width: 2000px;
+  background-color: #ffffff; /* Ensure card has white background */
+}
+
+.sign-in-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.MDBBtn {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.MDBBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.MDBCardBody {
+  padding: 2rem; /* Adjusted padding */
+}
+
+h2 {
+  font-size: 1.5rem; /* Adjusted font size */
+}
+
+.MDBInput {
+  font-size: 0.9rem; /* Adjusted input font size */
+}
+
+.MDBBtn {
+  font-size: 0.9rem; /* Adjusted button font size */
+}
+
+a {
+  font-size: 0.8rem; /* Adjusted link font size */
+}
+
+.mb-3 {
+  margin-bottom: 1rem; /* Added margin-bottom for spacing */
+}
+
+footer {
+  color: white;
+}
+.footer-link {
+  position: fixed;
+}
+
+.Hours-indicator-cards {
+  width: 800px;
+  display: flex;
+  justify-content: space-around;
 }

@@ -7,6 +7,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 
+//Logic
+import clockin from '../ClockInLogic'
+import clockout from '../ClockOutLogic'
 
 //Icons
 import { CgCoffee } from "react-icons/cg";
@@ -26,22 +29,62 @@ export default function MainContent() {
         <>
         {/* This renders the navbar from components folder */}
         <Navbar/> 
+        
         <Card>
+      
       <Card.Header>
-        <Nav variant="tabs" defaultActiveKey="#first">
+        
+        <Nav 
+        variant="tabs" 
+        defaultActiveKey="#first">
         </Nav>
+      
       </Card.Header>
+      
       <Card.Body>
         {/* Below line will get dynamic date  */}
-        <Card.Title>{dateToday}</Card.Title>  
-        <Button href="#" variant="success" className='me-2'><MdLogin className='me-2'/>Clock in</Button>
+        <Card.Title>
+          {dateToday}
+        </Card.Title>  
+        
+        <Button 
+        onClick={clockin}
+        variant="success" 
+        className='me-2'>
+        <MdLogin className='me-2'/>
+        Clock in
+        </Button>
 
-        <Button className ="hover-overlay" variant="outline-light" style={{borderColor:'#7D2DEC', borderWidth:'2px', color:'#7D2DEC'}}><CgCoffee className='me-1'/>Start break</Button>
+        <Button 
+        className ="hover-overlay" 
+        variant="outline-light" 
+        style={{borderColor:'#7D2DEC', borderWidth:'2px', color:'#7D2DEC'}}>
+        <CgCoffee className='me-1'/>
+        Start break
+        </Button>
         
-        <Button variant="danger"className='ms-2'><IoMdPower className='me-1'/>Clock out</Button>
+        <Button 
+        onClick={clockout}
+        variant="danger"
+        className='ms-2'>
+        <IoMdPower 
+        className='me-1'/>
+        Clock out
+        </Button>
+      
       </Card.Body>
+    
     </Card>
-        
+
+    <Card>
+      <Card.Body>Today's Clock-in</Card.Body>
+      <Card.Body id='Clockin-time-el'></Card.Body>
+    </Card>
+
+      <Card>
+      <Card.Body>Today's Clock-out</Card.Body>
+      <Card.Body id='Clockout-time-el'></Card.Body>
+    </Card>  
         </>
     )
 }
