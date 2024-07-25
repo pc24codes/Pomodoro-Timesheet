@@ -1,21 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
+import DatePicker from "./Components/DatePicker";
+import MainContent from "./Components/MainContent";
 
-function App() {
+export default function App() {
   return (
     <>
-      <div className="App">
-        <header className="App-header">
-          <h1>Hey this is an edited react element</h1>
-          <ul>
-            <li>This component is from App.js</li>
-            <li>React is fun!</li>
-          </ul>
-          <p>This is paragraph</p>
-        </header>
+      <MainContent />
+      <div className="Hours-indicator-cards">
+        <DatePicker hours="40" time="month" />
+
+        <DatePicker hours="5" time="week" />
+        <DatePicker hours="5" time="Today" />
       </div>
     </>
   );
 }
-
-export default App;

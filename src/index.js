@@ -1,20 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 //import "./index.css";
-import App from "./App";
-import NewDiv from "./Header";
-import LoginPage from "./Components/LoginPage";
-import "./App.css";
-import MainContent from "./Components/MainContent";
 
+//Component imports
+import App from "./App";
+import LoginPage from "./Components/LoginPage";
+
+//CSS Import
+import "./App.css";
+
+//React-bootstrap import
 import "bootstrap/dist/css/bootstrap.min.css";
-import DatePicker from "./Components/DatePicker";
+
+// //MUI import
+// import "mdb-react-ui-kit/dist/css/mdb.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MainContent />
-    <DatePicker hours="40" time="month" />
-    <DatePicker hours="5" time="week" />
+    <App />
   </React.StrictMode>
 );
