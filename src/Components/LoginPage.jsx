@@ -49,7 +49,7 @@ export default function LoginPage()
                 label="Email address" 
                 id="email" 
                 type="email" 
-                className="mb-3" 
+                className="mb-3 h-10" 
                 size='sm' /><br></br>
                 
                 <MDBInput 

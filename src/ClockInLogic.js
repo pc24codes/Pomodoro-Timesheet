@@ -2,13 +2,13 @@ let initialTime = document.getElementById("Clockin-time-el");
 let clockOutTime = document.getElementById("Clockout-time-el");
 
 export default function captureClockin() {
-  let d = new Date();
+  let date = new Date();
 
-  let getTheTime = d.getTime();
-  let localTimeString = d.getHours();
+  let getTheTime = date.getTime();
+  let localTimeString = date.getHours();
 
-  let hours = parseInt(d.getHours());
-  let minutes = parseInt(d.getMinutes());
+  let hours = parseInt(date.getHours());
+  let minutes = parseInt(date.getMinutes());
 
   const time = `${hours}:${minutes}`;
 
