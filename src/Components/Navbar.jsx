@@ -31,7 +31,8 @@ export default function NavBar()
             className="d-flex align-items-center">
             
             <Navbar.Toggle 
-            aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            aria-controls={`offcanvasNavbar-expand-${expand}`} 
+            />
             
             <Navbar.Brand 
             className='ms-3 mt-1' >
@@ -54,7 +55,7 @@ export default function NavBar()
               
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">
+                  <Nav.Link href="action1">
                   <FaHome className='me-2'/>
                   Home
                   </Nav.Link>

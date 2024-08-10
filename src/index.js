@@ -11,14 +11,16 @@ import "./App.css";
 
 //React-bootstrap import
 import "bootstrap/dist/css/bootstrap.min.css";
+import RegulariseTime from "./Components/RegulariseTime";
+import InputTime from "./Components/RegulariseTime";
 
-// //MUI import
+//MUI import
 // import "mdb-react-ui-kit/dist/css/mdb.min.css";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <InputTime />
   </React.StrictMode>
 );
