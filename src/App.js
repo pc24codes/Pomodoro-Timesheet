@@ -1,18 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-import DatePicker from "./Components/DatePicker";
+import RegulariseTime from "./Components/RegulariseTime";
+import NavBar from "./Components/Navbar";
+
+import DatePicker from "./Components/InsightsCard";
+
 import MainContent from "./Components/MainContent";
 
 export default function App() {
   return (
     <>
-      <MainContent />
-      <div className="Hours-indicator-cards">
-        <DatePicker hours="40" time="month" />
+      {/* <UserAuthContextProvider>My App</UserAuthContextProvider> */}
+      <NavBar />
+      {/* <MainContent /> */}
 
-        <DatePicker hours="5" time="week" />
-        <DatePicker hours="5" time="Today" />
-      </div>
+      {/* <SimpleSignin /> */}
+
+      <RegulariseTime />
     </>
   );
 }

@@ -21,6 +21,6 @@ import InputTime from "./Components/RegulariseTime";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <InputTime />
+    <App />
   </React.StrictMode>
 );
