@@ -14,6 +14,7 @@ import CustomDatePicker from "./CustomDatePicker";
 export default function InputTime() {
   return (
     <>
+      <NavBar />
       <Container className="mt-5 mb-5">
         <Card>
           <Card.Body>

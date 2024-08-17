@@ -68,7 +68,6 @@ export default function MainContent() {
               <CgCoffee className="me-1" />
               Start break
             </Button>
-
             <Button onClick={clockout} variant="danger" className="ms-2">
               <IoMdPower className="me-1" />
               Clock out
@@ -76,22 +75,25 @@ export default function MainContent() {
           </Card.Body>
         </Card>
       </Container>
-
-      <Card>
-        <Card.Body>Today's Clock-in</Card.Body>
-        <Card.Body id="Clockin-time-el"></Card.Body>
-      </Card>
-      <br />
-      <Card>
-        <Card.Body>Today's Clock-out</Card.Body>
-        <Card.Body id="Clockout-time-el"></Card.Body>
-      </Card>
-
-      <div className="Hours-indicator-cards">
-        <DatePicker hours="40" time="month" />
-        <DatePicker hours="5" time="week" />
-        <DatePicker hours="5" time="Day" />
-      </div>
+      <Container fluid>
+        <Card>
+          <Card.Body>Today's Clock-in</Card.Body>
+          <Card.Body id="Clockin-time-el"></Card.Body>
+        </Card>
+        <br></br>
+        <Card>
+          <Card.Body>Today's Clock-out</Card.Body>
+          <Card.Body id="Clockout-time-el"></Card.Body>
+        </Card>
+        <br></br>
+      </Container>
+      <Container fuid>
+        <div className="Hours-indicator-cards">
+          <DatePicker hours="40" time="month" />
+          <DatePicker hours="5" time="week" />
+          <DatePicker hours="5" time="Payday" />
+        </div>
+      </Container>
     </>
   );
 }
