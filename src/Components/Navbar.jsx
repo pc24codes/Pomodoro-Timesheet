@@ -17,6 +17,7 @@ import {
   MdPunchClock,
   MdAccountCircle,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   let userName = "Parasuram";
@@ -53,35 +54,35 @@ export default function NavBar() {
 
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="./MainContent.jsx">
+                  <Nav.Link as={Link} to="/home">
                     <FaHome className="me-2" />
                     Home
                   </Nav.Link>
 
-                  <Nav.Link href="#action2">
+                  <Nav.Link as={Link} to="/pending">
                     <MdSpaceDashboard className="me-2" />
                     Dashboard
                   </Nav.Link>
 
-                  <Nav.Link href="./RegulariseTime.jsx">
+                  <Nav.Link as={Link} to="/RegularisePunch-in">
                     <MdPunchClock className="me-2" />
                     Regularise punch-in
                   </Nav.Link>
 
-                  <Nav.Link href="./RegulariseTime.jsx">
+                  <Nav.Link as={Link} to="/pending">
                     <MdAccountCircle className="me-2" />
                     My Profile
                   </Nav.Link>
 
-                  <Nav.Link href="#action4">
+                  <Nav.Link as={Link} to="/pending">
                     <FaRupeeSign className="me-2" />
                     Pricing
                   </Nav.Link>
 
-                  <Nav.Link href="#action5">
+                  {/* <Nav.Link as={Link} to="/pending">
                     <FaSignOutAlt className="me-2" />
                     Signout
-                  </Nav.Link>
+                  </Nav.Link> */}
 
                   <NavDropdown.Divider />
                 </Nav>

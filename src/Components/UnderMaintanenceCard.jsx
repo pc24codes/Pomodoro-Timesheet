@@ -1,24 +1,32 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
 import HoldingPage from "../comingSoon.jpg";
+import NavBar from "./Navbar";
+import { Link } from "react-router-dom";
 
 export default function UnderMaintanence() {
   return (
-    <div style={styles.pageContainer}>
-      <Card style={styles.card}>
-        <Card.Body>
-          <Card.Text style={styles.text}>
-            Something new is brewing. Stay tuned 🙌!
-          </Card.Text>
-          <Card.Img variant="top" src={HoldingPage} style={styles.image} />
-          <Card.Footer>
-            <a href="https://www.freepik.com/free-vector/hand-drawn-construction-background_1583772.htm#fromView=search&page=2&position=3&uuid=59764291-fd4a-44db-be2d-fa28fb99d595">
-              Image by freepik
-            </a>
-          </Card.Footer>
-        </Card.Body>
-      </Card>
-    </div>
+    <>
+      <NavBar />
+      <div style={styles.pageContainer}>
+        <Card style={styles.card}>
+          <Card.Body>
+            <Card.Text style={styles.text}>
+              Something new is brewing. Stay tuned 🙌<br></br>
+              <Link style={styles.text} to="/">
+                Return to Home
+              </Link>
+            </Card.Text>
+            <Card.Img variant="top" src={HoldingPage} style={styles.image} />
+            <Card.Footer>
+              <a href="https://www.freepik.com/free-vector/hand-drawn-construction-background_1583772.htm#fromView=search&page=2&position=3&uuid=59764291-fd4a-44db-be2d-fa28fb99d595">
+                Image by freepik
+              </a>
+            </Card.Footer>
+          </Card.Body>
+        </Card>
+      </div>
+    </>
   );
 }
 
@@ -35,7 +43,7 @@ const styles = {
   card: {
     width: "100%",
     maxWidth: "800px",
-    height: "650px",
+    height: "700px",
     borderRadius: "15px",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
   },
