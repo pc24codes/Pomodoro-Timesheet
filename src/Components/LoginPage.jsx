@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
-import signInImg from "../signIn-Art.jpg";
-import logo from "../stopwatch-logo.png";
+import signInImg from "../assets/signIn-Art.jpg";
+import logo from "../assets/stopwatch-logo.png";
 // import styles from "../login.module.css";
 
 //MUI imports

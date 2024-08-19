@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Container } from "react-bootstrap";
-import HoldingPage from "../comingSoon.jpg";
+import HoldingPage from "../assets/comingSoon.jpg";
 import NavBar from "./Navbar";
 import { Link } from "react-router-dom";
 

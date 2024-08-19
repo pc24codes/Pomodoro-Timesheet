@@ -10,7 +10,7 @@ const Greeting = () => {
     } else if (currentHour >= 16 && currentHour < 20) {
       return "Good Evening  ";
     } else if (currentHour >= 20 || currentHour < 4) {
-      return " Good Night  ";
+      return " Good Evening  ";
     } else {
       return " Good Morning  ";
     }
