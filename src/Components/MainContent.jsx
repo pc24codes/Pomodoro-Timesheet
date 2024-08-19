@@ -113,8 +113,8 @@ export default function MainContent() {
           <Card.Body>Today's Clock-in</Card.Body>
           <Card.Body
             id="Clockin-time-el"
-            className="font-weight-bold"
-            style={{ fontWeight: "800" }}
+            className="fs-3"
+            style={{ fontWeight: "500" }}
           >
             {clockInTime}
           </Card.Body>
@@ -122,7 +122,11 @@ export default function MainContent() {
         <br></br>
         <Card>
           <Card.Body>Today's Clock-out</Card.Body>
-          <Card.Body id="Clockout-time-el" style={{ fontWeight: "800" }}>
+          <Card.Body
+            id="Clockout-time-el"
+            className="fs-3"
+            style={{ fontWeight: "500" }}
+          >
             {clockOutTime}
           </Card.Body>
         </Card>
