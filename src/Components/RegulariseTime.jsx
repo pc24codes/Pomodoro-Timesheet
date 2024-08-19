@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 import Form from "react-bootstrap/Form";
 import TimeTable from "./ClockedDates";
@@ -9,9 +9,10 @@ import { Row, Col, Container, Button } from "react-bootstrap";
 
 import CustomDatePicker from "./CustomDatePicker";
 
-// function AddDate() {}
-
 export default function InputTime() {
+  const [manualClockInTime, setManualClockInTime] = useState("09:00");
+  const [manualClockOutTime, setManualClockOutTime] = useState("18:00");
+
   return (
     <>
       <NavBar />
@@ -23,20 +24,19 @@ export default function InputTime() {
             </Card.Title>
             <Row>
               {/* Clock-in Section */}
-              <Col md={6}>
+              <Col md={4}>
                 <Form>
                   <Form.Group controlId="clockInTime">
-                    <Form.Label>Clock-in Time</Form.Label>
+                    <Form.Label>Clock-in Time*</Form.Label>
                     <Row>
                       <Col className="mb-4">
                         <Form.Control
-                          type="number"
+                          type="text"
                           placeholder="Hours*"
-                          min="0"
-                          max="23"
+                          value={manualClockInTime}
                         />
                       </Col>
-                      <Col>
+                      {/* <Col>
                         <Form.Control
                           type="number"
                           placeholder="Minutes*"
@@ -44,7 +44,7 @@ export default function InputTime() {
                           max="59"
                           required
                         />
-                      </Col>
+                      </Col> */}
                       <Col className="mb-3">
                         <Form.Control
                           type="Date"
@@ -63,21 +63,20 @@ export default function InputTime() {
             <hr /> {/* Horizontal Divider */}
             <Row>
               {/* Clock-out Section */}
-              <Col md={6} className="mt-3">
+              <Col md={4} className="mt-3">
                 <Form>
                   <Form.Group controlId="clockOutTime">
-                    <Form.Label>Clock-out Time</Form.Label>
+                    <Form.Label>Clock-out Time*</Form.Label>
                     <Row>
                       <Col>
                         <Form.Control
-                          type="number"
+                          type="text"
                           placeholder="Hours*"
-                          min="0"
-                          max="23"
+                          value={manualClockOutTime}
                           required
                         />
                       </Col>
-                      <Col>
+                      {/* <Col>
                         <Form.Control
                           type="number"
                           placeholder="Minutes*"
@@ -85,7 +84,7 @@ export default function InputTime() {
                           max="59"
                           required
                         />
-                      </Col>
+                      </Col> */}
                       <Col>
                         <Button variant="primary">Submit</Button>
                       </Col>

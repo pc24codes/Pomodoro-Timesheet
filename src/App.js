@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import RegulariseTime from "./Components/RegulariseTime";
 import NavBar from "./Components/Navbar";
