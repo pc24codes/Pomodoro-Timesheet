@@ -1,0 +1,4 @@
+{
+    "sqlite.logLevel": "DEBUG",
+    "sqlite.setupDatabase": {}
+}
