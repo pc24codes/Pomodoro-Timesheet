@@ -7,11 +7,13 @@ import Stack from "react-bootstrap/Stack";
 import Card from "react-bootstrap/Card";
 import { Row, Col, Container, Button } from "react-bootstrap";
 
-import CustomDatePicker from "./CustomDatePicker";
-
 export default function InputTime() {
   const [manualClockInTime, setManualClockInTime] = useState("09:00");
   const [manualClockOutTime, setManualClockOutTime] = useState("18:00");
+
+  const handleManualClockInTime = () => {};
+
+  const handleManualClockOutTime = () => {};
 
   return (
     <>
@@ -32,26 +34,15 @@ export default function InputTime() {
                       <Col className="mb-4">
                         <Form.Control
                           type="text"
-                          placeholder="Hours*"
                           value={manualClockInTime}
+                          onChange={handleManualClockInTime}
                         />
                       </Col>
-                      {/* <Col>
-                        <Form.Control
-                          type="number"
-                          placeholder="Minutes*"
-                          min="0"
-                          max="59"
-                          required
-                        />
-                      </Col> */}
                       <Col className="mb-3">
                         <Form.Control
                           type="Date"
                           size="md"
                           placeholder="Date*"
-                          min="0"
-                          max="23"
                           required
                         />
                       </Col>
@@ -73,18 +64,10 @@ export default function InputTime() {
                           type="text"
                           placeholder="Hours*"
                           value={manualClockOutTime}
+                          onChange={handleManualClockOutTime}
                           required
                         />
                       </Col>
-                      {/* <Col>
-                        <Form.Control
-                          type="number"
-                          placeholder="Minutes*"
-                          min="0"
-                          max="59"
-                          required
-                        />
-                      </Col> */}
                       <Col>
                         <Button variant="primary">Submit</Button>
                       </Col>

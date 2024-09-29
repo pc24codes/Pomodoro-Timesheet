@@ -19,6 +19,7 @@ import { MdLogin } from "react-icons/md";
 import { IoMdPower } from "react-icons/io";
 
 export default function MainContent() {
+  //Below methods to display current system date
   const date = new Date();
   const months = [
     "January",
@@ -55,13 +56,8 @@ export default function MainContent() {
 
   return (
     <>
-      {/* This renders the navbar from components folder */}
       <Container fluid className="mt-4 mb-5">
         <Card>
-          {/* <Card.Header>
-            <Nav variant="tabs" defaultActiveKey="#first"></Nav>
-          </Card.Header> */}
-
           <Card.Body>
             {/* Below line will get dynamic date  */}
             <Card.Title>{dateToday}</Card.Title>
@@ -107,10 +103,10 @@ export default function MainContent() {
         </Card>
       </Container>
 
-      {/* Below section is for the insights  */}
+      {/* Below section is for the punch-ins time  */}
       <Container fluid>
         <Card>
-          <Card.Body>Today's Clock-in</Card.Body>
+          <Card.Body className="fw-bolder">Today's Clock-in</Card.Body>
           <Card.Body
             id="Clockin-time-el"
             className="fs-3"
@@ -121,7 +117,7 @@ export default function MainContent() {
         </Card>
         <br></br>
         <Card>
-          <Card.Body>Today's Clock-out</Card.Body>
+          <Card.Body className="fw-bolder">Today's Clock-out</Card.Body>
           <Card.Body
             id="Clockout-time-el"
             className="fs-3"
@@ -132,7 +128,9 @@ export default function MainContent() {
         </Card>
         <br></br>
       </Container>
-      <Container fuid>
+      <hr></hr>
+
+      <Container fluid>
         <div className="Hours-indicator-cards">
           <DatePicker hours="40" time="month" />
           <DatePicker hours="5" time="week" />
